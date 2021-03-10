@@ -35,8 +35,11 @@ Here are some ideas to get you started:
   - 项目地址：https://github.com/Jeremy-294/CIBO
   
   详细内容：
-  - 通过组件化开发，注重组件复用性，采用Promise+回调处理异步请求。
-  - 使用云开发，实现无需对openid的鉴权，且简化部署操作，引入VantUI，按需引入组件，减小项目体积。
+  - 通过组件化开发，注重组件复用性，采用 Promise+回调，async+await处理异步请求。
+  - 使用云开发，封装并部署云函数，在服务端处理请求，减少客户端负担。
+  - 对输入做防抖处理，优化输入性能，采用 localStorage 本地缓存，减少 HTTP 请求。
+  - 采用 Flex 布局实现页面布局，按需引入Vant Weapp UI组件，减小项目体积。
+  - 通过 onPageScroll() 监听页面滚动,判读元素距离页面顶部距离与页面可视高度对比实现图片懒加载，减轻服务端压力。
   ```
 
   - **校园电单车后台管理系统**
@@ -49,9 +52,10 @@ Here are some ideas to get you started:
   - 涉及技术：Vue全家桶+ElementUI+ECharts+MySQL
   - 项目地址：https://github.com/Jeremy-294/SCAU_Vue_bike_management
   详细内容：
-  - 通过Axios的二次封装以及路由拦截，sessionStorage等技术，配合Token实现了登录状态的管理及鉴权。
-  - 使用this.$refs.form.validate()实现表单验证，并使用async、await配合Axios实现异步请求与数据提交。
-  - 优化ElementUI按需导入代码，减小项目体积，为每个Vue组件创建独立码云分支，各分支独立更新。
+  - 使用Vue异步组件实现懒加载，按需加载，分担页面加载压力，提高首屏加载性能。
+  - 使用$refs获取多个相同组件节点对象，减少获取DOM节点的消耗。
+  - 优化 ElementUI 按需导入代码，并使用global.css对重复CSS样式包装，减小项目体积。
+  - 属性 :rule 绑定表单验证规则对象，配合正则对表单输入格式判断，使用 async、await 配合 Axios 实现异步请求。
   - 收获：了解到了前后端开发的基本流程，学习了基础的Axios请求，async和await实现异步请求，路由导航和守卫，
     validate属性验证，ElementUI开发，如何使用NodeJS接口连接数据库等开发知识。
   ```
